@@ -147,30 +147,6 @@ for (( i=0; i<${node_arraylength}; i++ ));
 				esac
 		done
 
-# <<--replaced by array
-# check for SAPSRV start 
-#grep "sapstartsrv is not running for instance" $ha_log >> $outputfile
-## check for aborted cluster operations 
-#grep  "aborted by operation" $ha_log >> $outputfile
-## check for failing monitor operations with a force move 
-#grep -A 10 "warning: Processing failed monitor" $ha_log | grep -A 7 Forcing >>$outputfile
-## check for expired failures
-#grep -A 5 "notice: Clearing failure" $ha_log >>$outputfile
-## check for max connections
-#grep  "Failed to create session: Maximum number of sessions (8192)" $ha_log >>$outputfile
-## check unknown shutdown fence
-#grep  "will be fenced" $ha_log >>$outputfile
-#echo " Check for fencing messages on ${nodes[$i]}"
-#grep  "state is now lost" $ha_log >>$outputfile
-#grep  "TOTEM" $ha_log >>$outputfile
-#stonith fails 
-#echo " Check for Stonith"
-#grep -B 3 "Stonith failed" $ha_log >>$outputfile
-#check pacemaker 
-#echo "Pacemaker messages"
-#grep "pacemaker-controld" $ha_log >>$outputfile
-#check input resources 
-## end replaced by array -->>
 
 #grep $rsc1 $ha_log >>$outputfile
 echo "End finding log entries on: ${ar_nodes[$i]}"
