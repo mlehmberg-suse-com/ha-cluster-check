@@ -1,0 +1,16 @@
+sapstartsrv is not running for instance
+aborted by operation
+warning: Processing failed monitor
+notice: Clearing failure
+#Failed to create session: Maximum number of sessions (8192)
+will be fenced
+state is now lost
+TOTEM
+Stonith failed
+pacemaker-controld
+demoted
+promoted
+==== begin action
+==== end action
+Dual primary detected
+pacemaker-execd
