@@ -24,3 +24,4 @@ pacemaker-schedulerd
 lrmd 
 pengine
 crmd
+sbd
