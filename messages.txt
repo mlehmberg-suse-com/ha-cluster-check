@@ -22,3 +22,5 @@ SWAIT
 sap_suse_cluser_connector
 pacemaker-schedulerd
 lrmd 
+pengine
+crmd
