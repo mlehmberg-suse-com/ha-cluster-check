@@ -14,3 +14,10 @@ promoted
 ==== end action
 Dual primary detected
 pacemaker-execd
+fenced
+sync_state=SOK
+site_srHook_SITE
+SFAIL
+SWAIT
+sap_suse_cluser_connector
+pacemaker-schedulerd
