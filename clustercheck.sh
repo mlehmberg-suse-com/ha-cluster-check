@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# The following locations need to be changes if needed  #messages_2_process
  
 output_file=/tmp/tmp.txt
 sortedfile=/tmp/cluster.txt
