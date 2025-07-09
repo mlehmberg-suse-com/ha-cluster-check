@@ -35,7 +35,7 @@ function confirm() {
     read -r -p "${1:-Do you want to read the outpout now? [y/N]} " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
-	less $sortedfile
+	less ../$sortedfile
           
             ;;
         *)
@@ -102,7 +102,7 @@ ar_messages+=($rsc1)
 }
 
 #remove outputfile
-rm $output_file $sortedfile $resource_array $resource_list
+rm ../$output_file $output_file $sortedfile $resource_array $resource_list
 
 #MAIN 
 #call functiong et_resources
@@ -137,9 +137,9 @@ for (( i=0; i<${node_arraylength}; i++ ));
 			do
 			#debug echo "Find \""${ar_messages[$n]}"\" in  $ha_log on node ${ar_nodes[$i]}"
 #			process_msg
-			echo $var2
+			#echo $var2
 			grep "$var2" $ha_log 
-			pause
+			#pause
 			#grep "$var2" $ha_log >> $output_file	
 			
 				case ${#ar_messages[$n]} in
@@ -154,7 +154,7 @@ for (( i=0; i<${node_arraylength}; i++ ));
 				;;
 				*)
 				process_msg
-				grep "$var2" $ha_log >> $output_file	
+				grep  "$var2" $ha_log >> $output_file	
 								;;
 				esac
 				
@@ -198,6 +198,7 @@ done
 
 sort -o $sortedfile tmp.txt  
 uniq -u $sortedfile
+mv  $sortedfile ../$sortedfile
 confirm
 #less $sortedfile
 
